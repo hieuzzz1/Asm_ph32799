@@ -5,7 +5,7 @@
     @include('client.layouts.partials.css')
 </head>
 
-<body class="home blog paged paged-2">
+<body class="archive category category-am-nhac category-1257">
     <header id="masthead" class="site-header" role="banner">
         @include('client.layouts.partials.header-top')
 
@@ -17,14 +17,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
+                        @yield('tittle-post')
                     </div>
                 </div>
                 <div class="row">
-                    @yield('content')
+                    @yield('content-post')
 
                     @include('client.layouts.partials.main-sidebar')
-
                 </div>
             </div>
         </div>

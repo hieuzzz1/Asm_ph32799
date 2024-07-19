@@ -5,20 +5,21 @@
                 <nav class="main_menu">
                     <ul id="menu-menu-chinh" class="primary-menu">
                         <li id="menu-item-28675" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-28675">
-                            <a href="../../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                            <a href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a>
                         </li>
                         @foreach($dataCate as $render)
-                        <li id="menu-item-28960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-28960">
-                            <a href="">{{ $render->name }}</a>
+                        <li class="menu-item-type-taxonomy menu-item-object-category menu-item-has-children ">
+                            <a href="{{ url('post/'. $render->id) }}">{{ $render->name }}</a>
                         </li>
                         @endforeach
+
                     </ul> <a class="search_toggle" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                     <a href="#" class="mobile_menu_toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
                     <div class="search_form_header">
                         <div class="search_form_wrap">
-                            <form role="search" method="get" class="search-form" action="http://dev1.mypagevn.com/star1/">
-                                <input type="text" id="search_input" class="search-field" placeholder="Từ khóa..." value="" name="s" />
-                                <button type="submit" class="search-submit">Tìm kiếm</button>
+                            <form role="search" method="get" class="search-form" action="{{ route('search') }}">
+                                <input type="text" id="search_input" class="search-field" placeholder="Từ khóa..." value="{{ request('s') }}" name="s" />
+                                <button type="submit" class="search-submit">Tìsm kiếm</button>
                             </form>
                         </div>
                     </div>

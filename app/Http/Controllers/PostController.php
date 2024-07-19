@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -16,6 +17,35 @@ class PostController extends Controller
         $data = Post::all();
         $dataCate = Category::all();
         return view('client.home', compact('data', 'dataCate'));
+    }
+
+    public function tinTrongLoai($idTL)
+    {
+        $tin = DB::table('posts')->where('category_id', $idTL)->get();
+        $loaitin = DB::table('posts')->select('id', 'title')
+            ->orderBy('id', 'ASC')
+            ->limit(5)->get();
+        $dataCate = Category::all();
+
+        return view('client.shop', compact('dataCate', 'tin', 'loaitin'));
+    }
+
+    public function search(Request $request)
+    {
+        // Validate yêu cầu
+        $request->validate([
+            's' => 'required|string|min:1',
+        ], [
+            's.required' => 'Vui lòng nhập từ khóa tìm kiếm.',
+            's.min' => 'Từ khóa tìm kiếm phải có ít nhất 1 ký tự.'
+        ]);
+
+        $query = $request->input('s');
+        $results = Post::where('title', 'LIKE', "%{$query}%")
+            ->orWhere('content', 'LIKE', "%{$query}%")
+            ->get();
+        $dataCate = Category::all();
+        return view('client.results', compact('dataCate', 'results', 'query'));
     }
 
     /**

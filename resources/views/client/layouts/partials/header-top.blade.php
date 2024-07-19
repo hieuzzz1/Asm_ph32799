@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-md-2">
             <div class="logo">
-                <a class="logo_link" href="../../index.html">
-                    <img src="Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/uploads/2018/07/LOGO-web.png" alt="Star1" /> </a>
+                <a class="logo_link" href="{{ url('/') }}">
+                    <img src="../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/uploads/2018/07/LOGO-web.png" alt="Star1" /> </a>
             </div>
         </div>
         <div class="col-md-10">

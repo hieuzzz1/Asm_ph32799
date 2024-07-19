@@ -14,9 +14,14 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $data = [
-            ['name' => 'Nguyễn Văn A'],
-            ['name' => 'Nguyễn Văn B'],
-            ['name' => 'Nguyễn Văn C'],
+            ['name' => 'Sao 24h'],
+            ['name' => 'Thời trang'],
+            ['name' => 'Điện ảnh'],
+            ['name' => 'Âm nhạc'],
+            ['name' => 'TV Show'],
+            ['name' => 'Đời sống'],
+            ['name' => 'LGBT'],
+            ['name' => 'Video'],
         ];
 
         foreach ($data as $categoryData) {

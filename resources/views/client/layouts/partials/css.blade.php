@@ -99,12 +99,12 @@
         padding: 0 !important;
     }
 </style>
-<link rel='stylesheet' id='bootstrap-css' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/css/bootstrap.min5152.css?ver=1.0' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-css' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/css/font-awesome.min5152.css?ver=1.0' type='text/css' media='all' />
-<link rel='stylesheet' id='swiper-slider-css' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/css/swiper5152.css?ver=1.0' type='text/css' media='all' />
-<link rel='stylesheet' id='tn_style-css' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/style5152.css?ver=1.0' type='text/css' media='all' />
-<link rel='stylesheet' id='youtube-channel-gallery-css' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/plugins/youtube-channel-gallery/stylesfd8a.css?ver=4.9.25' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery.magnific-popup-css' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/plugins/youtube-channel-gallery/magnific-popupfd8a.css?ver=4.9.25' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/css/bootstrap.min5152.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/css/font-awesome.min5152.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-slider-css' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/css/swiper5152.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tn_style-css' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/style5152.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='youtube-channel-gallery-css' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/plugins/youtube-channel-gallery/stylesfd8a.css?ver=4.9.25' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.magnific-popup-css' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/plugins/youtube-channel-gallery/magnific-popupfd8a.css?ver=4.9.25' type='text/css' media='all' />
 <script type='text/javascript'>
     /* <![CDATA[ */
     var ajax_url_custom = {
@@ -113,9 +113,9 @@
     };
     /* ]]> */
 </script>
-<script type='text/javascript' src='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
-<script type='text/javascript' src='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
-<link rel='https://api.w.org/' href='Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-json/index.html' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/xmlrpc0db0.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/wlwmanifest.xml" />
+<script type='text/javascript' src='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 4.9.25" />
