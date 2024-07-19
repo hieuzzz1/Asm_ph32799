@@ -19,7 +19,7 @@
                         <div class="search_form_wrap">
                             <form role="search" method="get" class="search-form" action="{{ route('search') }}">
                                 <input type="text" id="search_input" class="search-field" placeholder="Từ khóa..." value="{{ request('s') }}" name="s" />
-                                <button type="submit" class="search-submit">Tìsm kiếm</button>
+                                <button type="submit" class="search-submit">Tìm kiếm</button>
                             </form>
                         </div>
                     </div>
