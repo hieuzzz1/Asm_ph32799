@@ -18,6 +18,14 @@ class PostController extends Controller
         $dataCate = Category::all();
         return view('client.home', compact('data', 'dataCate'));
     }
+    public function details($idDT)
+    {
+        $post = Post::findOrFail($idDT);
+        $dataCate = Category::all();
+        $dataCatedt = Category::findOrFail($idDT);
+
+        return view('client.details', compact('post', 'dataCate', 'dataCatedt'));
+    }
 
     public function tinTrongLoai($idTL)
     {
@@ -26,13 +34,12 @@ class PostController extends Controller
             ->orderBy('id', 'ASC')
             ->limit(5)->get();
         $dataCate = Category::all();
-
-        return view('client.shop', compact('dataCate', 'tin', 'loaitin'));
+        $currentCategory = Category::findOrFail($idTL);
+        return view('client.shop', compact('dataCate', 'tin', 'loaitin', 'currentCategory'));
     }
 
     public function search(Request $request)
     {
-        // Validate yêu cầu
         $request->validate([
             's' => 'required|string|min:1',
         ], [

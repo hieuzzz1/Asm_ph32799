@@ -24,3 +24,5 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/post/{idTL}', [PostController::class, 'tinTrongLoai']);
 
 Route::get('/search', [PostController::class, 'search'])->name('search');
+
+Route::get('/details/{idDT}', [PostController::class, 'details']);

@@ -56,7 +56,7 @@
             <div class="col-sm-4">
                 <article class="post_item ">
                     <div class="cover">
-                        <a title="Cô gái cover ca khúc “Lạc Trôi” gây ấn tượng với vẻ ngoài nhí nhảnh" href="../../co-gai-cover-ca-khuc-lac-troi-gay-tuong-voi-ve-ngoai-nhi-nhanh/index.html" href="../../co-gai-cover-ca-khuc-lac-troi-gay-tuong-voi-ve-ngoai-nhi-nhanh/index.html">
+                        <a title="Cô gái cover ca khúc “Lạc Trôi” gây ấn tượng với vẻ ngoài nhí nhảnh" href="{{ url('details/'. $post->id) }}">
                             <img width="338" height="190" src="Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/uploads/2017/08/nhuthuy1-338x190.jpg" class="attachment-338-190 size-338-190 wp-post-image" alt="" srcset="http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/nhuthuy1-338x190.jpg 338w, http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/nhuthuy1-265x149.jpg 265w, http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/nhuthuy1-533x300.jpg 533w, http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/nhuthuy1-100x56.jpg 100w" sizes="(max-width: 338px) 100vw, 338px" />
                         </a>
                     </div>
@@ -64,7 +64,7 @@
                         <a title="Cô gái cover ca khúc “Lạc Trôi” gây ấn tượng với vẻ ngoài nhí nhảnh" href="">
                             <h3 class="title">{{ $post->title }}</h3>
                         </a>
-                        <p class="excerpt">{{ $post->content }}...</p>
+                        <p class="excerpt">{{ $post->content }}</p>
                     </header>
                 </article>
             </div>

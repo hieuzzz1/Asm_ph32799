@@ -3,7 +3,7 @@
 @section('tittle-post')
 <div class="title_wrap">
     <div class="cat">
-        <h1 class="page_title"><a class="" href="index.html"></a></h1>
+        <h1 class="page_title"><a class="" href="index.html">{{ $currentCategory->name }}</a></h1>
     </div>
 </div>
 @endsection
@@ -20,7 +20,7 @@
                 @foreach($tin as $post)
                 <article class="post_item ">
                     <div class="cover">
-                        <a title="The Nut Job 2 – Siêu phẩm hoạt hình cực dễ thương trong dịp lễ 2.9" href="../../nut-job-2-sieu-pham-hoat-hinh-cuc-de-thuong-trong-dip-le-2-9/index.html" href="../../nut-job-2-sieu-pham-hoat-hinh-cuc-de-thuong-trong-dip-le-2-9/index.html">
+                        <a title="The Nut Job 2 – Siêu phẩm hoạt hình cực dễ thương trong dịp lễ 2.9" href="{{ url('details/'. $post->id) }}">
                             <img width="338" height="190" src="../../wp-content/uploads/2017/08/POSTER-691x1024-338x190.jpg" class="attachment-338-190 size-338-190 wp-post-image" alt="" srcset="http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/POSTER-691x1024-338x190.jpg 338w, http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/POSTER-691x1024-265x149.jpg 265w, http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/POSTER-691x1024-533x300.jpg 533w, http://dev1.mypagevn.com/star1/wp-content/uploads/2017/08/POSTER-691x1024-100x56.jpg 100w" sizes="(max-width: 338px) 100vw, 338px" />
                         </a>
                     </div>
