@@ -18,6 +18,7 @@ class PostController extends Controller
         $dataCate = Category::all();
         return view('client.home', compact('data', 'dataCate'));
     }
+
     public function details($idDT)
     {
         $post = Post::findOrFail($idDT);

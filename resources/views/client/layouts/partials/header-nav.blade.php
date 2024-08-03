@@ -9,7 +9,8 @@
                         </li>
                         @foreach($dataCate as $render)
                         <li class="menu-item-type-taxonomy menu-item-object-category menu-item-has-children ">
-                            <a href="{{ url('post/'. $render->id) }}">{{ $render->name }}</a>
+                            <a href="{{ url('post/'. $render->id) }}" swal ( " Xin chào thế giới! " ) ;>{{ $render->name }}</a>
+
                         </li>
                         @endforeach
 
