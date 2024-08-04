@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Posts;
 
-use App\Models\Post;
+use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PostController extends Controller
+class PostsMemberController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,7 @@ class PostController extends Controller
     {
         $data = Post::all();
         $dataCate = Category::all();
-        return view('client.home', compact('data', 'dataCate'));
+        return view('client.member.home', compact('data', 'dataCate'));
     }
 
     public function details($idDT)
@@ -25,7 +26,7 @@ class PostController extends Controller
         $dataCate = Category::all();
         $dataCatedt = Category::findOrFail($idDT);
 
-        return view('client.details', compact('post', 'dataCate', 'dataCatedt'));
+        return view('client.member.details', compact('post', 'dataCate', 'dataCatedt'));
     }
 
     public function tinTrongLoai($idTL)
@@ -36,7 +37,7 @@ class PostController extends Controller
             ->limit(5)->get();
         $dataCate = Category::all();
         $currentCategory = Category::findOrFail($idTL);
-        return view('client.shop', compact('dataCate', 'tin', 'loaitin', 'currentCategory'));
+        return view('client.member.shop', compact('dataCate', 'tin', 'loaitin', 'currentCategory'));
     }
 
     public function search(Request $request)
@@ -53,54 +54,6 @@ class PostController extends Controller
             ->orWhere('content', 'LIKE', "%{$query}%")
             ->get();
         $dataCate = Category::all();
-        return view('client.results', compact('dataCate', 'results', 'query'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Post $post)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Post $post)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Post $post)
-    {
-        //
+        return view('client.member.results', compact('dataCate', 'results', 'query'));
     }
 }

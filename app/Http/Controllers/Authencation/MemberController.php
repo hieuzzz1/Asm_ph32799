@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers\Authencation;
+
+use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Post;
+use Illuminate\Http\Request;
+
+class MemberController extends Controller
+{
+    public function dashboard()
+    {
+        $data = Post::all();
+        $dataCate = Category::all();
+        return view('client.member.home', compact('data', 'dataCate'));
+    }
+}

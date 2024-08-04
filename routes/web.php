@@ -1,7 +1,12 @@
 <?php
 
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\CateroryControler;
+use App\Http\Controllers\Authencation\AdminController;
+use App\Http\Controllers\Authencation\AuthenController;
+use App\Http\Controllers\Authencation\MemberController;
+use App\Http\Controllers\Posts\PostsMemberController;
+use App\Http\Middleware\isAdmin;
+use App\Http\Middleware\isMember;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +24,30 @@ use Illuminate\Support\Facades\Route;
 //     return view('client.home');
 // });
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostsMemberController::class, 'index']);
+Route::get('post/{idTL}', [PostsMemberController::class, 'tinTrongLoai']);
+Route::get('search', [PostsMemberController::class, 'search'])->name('search');
+Route::get('details/{idDT}', [PostsMemberController::class, 'details']);
 
-Route::get('/post/{idTL}', [PostController::class, 'tinTrongLoai']);
 
-Route::get('/search', [PostController::class, 'search'])->name('search');
+Route::get('login', [AuthenController::class, 'showFormLogin'])->name('login');
+Route::post('login', [AuthenController::class, 'handleLogin']);
+Route::get('register', [AuthenController::class, 'showFormRegister'])->name('register');
+Route::post('register', [AuthenController::class, 'handleRegister']);
+Route::post('logout', [AuthenController::class, 'logout'])->name('logout');
 
-Route::get('/details/{idDT}', [PostController::class, 'details']);
+
+Route::get('admin', [AdminController::class, 'dashboard'])
+    ->name('client.admin.index')
+    ->middleware(['auth', isAdmin::class]);
+Route::get('member', [MemberController::class, 'dashboard'])
+    ->name('client.member.home')
+    ->middleware(['auth', isMember::class]);
+
+Route::get('forgotPassword', [AuthenController::class, 'forgotPassword'])->name('forgotPassword');
+Route::post('forgotPassword', [AuthenController::class, 'handleforgotPassword']);
+Route::get('getPassword', [AuthenController::class, 'getPassword'])->name('getPassword');
+Route::post('getPassword', [AuthenController::class, 'handleGetPassword']);
+
+Route::get('password/reset/{token}', [AuthenController::class, 'getPassword'])->name('password.reset');
+Route::post('password/reset', [AuthenController::class, 'handleGetPassword'])->name('password.update');

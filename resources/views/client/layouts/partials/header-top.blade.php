@@ -24,6 +24,28 @@
                             <a href="../../tag/asias-next-top-model-2017/index.html">Asia&#8217;s Next Top Model
                                 2017</a>
                         </li>
+
+                        @if (Auth::check())
+
+                        <div class="dropdown">
+                            <a href="#" class="header-top-login-check">Xin chào, {{ Auth::user()->name }}</a>
+                            <div class="dropdown-content">
+                                <a href="">Chi tiết tài khoản</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit">Đăng xuất</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        @else
+                        <a href="{{ route('login') }}" class="header-top-login-text">
+                            <label>
+                                <i class="bi bi-person-fill">Tài khoản</i>
+                            </label>
+                        </a>
+                        @endif
+
                     </ul>
                 </div>
             </div>
