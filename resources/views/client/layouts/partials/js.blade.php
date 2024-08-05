@@ -45,3 +45,8 @@
 </div>
 <div class="overlay" style="display: none;"></div>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type='text/javascript' src='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/js/bootstrap.min5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/js/swiper.min5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-content/themes/star1/js/scripts5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../Asm_ph32799_nguyenTrungHieu/dev1.mypagevn.com/star1/wp-includes/js/wp-embed.minfd8a.js?ver=4.9.25'></script>
